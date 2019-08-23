@@ -12,7 +12,7 @@ The BAGLS benchmark dataset is split into 55,750 training images and 3,500 test 
 
 In the following Figure the first frames from the test dataset are shown:
 
-![Examples from the test dataset](examples_test_dataset.png "Examples from the test dataset")
+![Examples from the test dataset](Images/examples_test_dataset.png "Examples from the test dataset")
 
 ## Semantic segmentation using deep neural networks
 
@@ -23,7 +23,7 @@ We trained for 25 epochs using a dice loss, each epoch took roughly 38 minutes w
 
 Using the trained network, we are able to reliable segment unknown data:
 
-![Segmented vocal folds](vocal_folds_segmented.gif "Vocal folds segmented")
+![Segmented vocal folds](Images/evocal_folds_segmented.gif "Vocal folds segmented")
 
 ## How to cite BAGLS
 
