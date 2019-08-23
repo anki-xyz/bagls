@@ -23,7 +23,7 @@ We trained for 25 epochs using a dice loss, each epoch took roughly 38 minutes w
 
 Using the trained network, we are able to reliable segment unknown data:
 
-![Segmented vocal folds](Images/evocal_folds_segmented.gif "Vocal folds segmented")
+![Segmented vocal folds](Images/vocal_folds_segmented.gif "Vocal folds segmented")
 
 ## How to cite BAGLS
 
