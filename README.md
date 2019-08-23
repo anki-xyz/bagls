@@ -25,6 +25,10 @@ Using the trained network, we are able to reliable segment unknown data:
 
 ![Segmented vocal folds](Images/vocal_folds_segmented.gif "Vocal folds segmented")
 
+## Using the code
+
+We provide two jupyter notebooks. One to train a U-Net model on the data and one to compute the IoU on the test data. You will need to adapt the paths to your local ones. 
+
 ## How to cite BAGLS
 
 T.b.d.
