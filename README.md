@@ -8,7 +8,7 @@ In contrast to stroboscopy, high-speed videoendoscopy (HSV) visualizes the full 
 
 ## BAGLS benchmark dataset
 
-The BAGLS benchmark dataset is split into 55,750 training images and 3,500 test images. The test images are balanced across all the international groups that provided data. All the images are shuffled and anonymized, so that one cannot track back individuals and the data origin. For each frame (following the scheme #.png), there is a respective segmentation mask (following the scheme #_seg.png). The segmentation mask was created using  either the [Glottis Analysis Tools](http://www.hno-klinik.uk-erlangen.de/phoniatrie/forschung/computational-medicine/gat-software/), [PiPrA](https://github.com/anki-xyz/pipra) or both.
+The BAGLS benchmark dataset is split into 55,750 training images and 3,500 test images, as well as 559 short videos. The test images are balanced across all the international groups that provided data. All the images and videos are shuffled and anonymized, so that one cannot track back individuals and the data origin. For each frame (following the scheme ```#.png```), there is a respective segmentation mask (following the scheme ```#_seg.png```) and respective metadata (```#.meta```). The segmentation mask was created using  either the [Glottis Analysis Tools](http://www.hno-klinik.uk-erlangen.de/phoniatrie/forschung/computational-medicine/gat-software/), [PiPrA](https://github.com/anki-xyz/pipra) or both. The videos are provided without segmentation, but with metadata.
 
 In the following Figure the first frames from the test dataset are shown:
 
@@ -35,7 +35,7 @@ T.b.d.
 
 ## References
 
-<a name="citation2">[1]</a> Deliyski, D. D., Petrushev, P. P., Bonilha, H. S., Gerlach, T. T., Martin-Harris, B., & Hillman, R. E. (2008). [Clinical implementation of laryngeal high-speed videoendoscopy: Challenges and evolution.](https://doi.org/10.1159/000111802) Folia Phoniatrica et Logopaedica, 60(1), 33-44.
+<a name="citation1">[1]</a> Deliyski, D. D., Petrushev, P. P., Bonilha, H. S., Gerlach, T. T., Martin-Harris, B., & Hillman, R. E. (2008). [Clinical implementation of laryngeal high-speed videoendoscopy: Challenges and evolution.](https://doi.org/10.1159/000111802) Folia Phoniatrica et Logopaedica, 60(1), 33-44.
 
 <a name="citation2">[2]</a> Ronneberger, O., Fischer, P., & Brox, T. (2015, October). [U-net: Convolutional networks for biomedical image segmentation.](http://dx.doi.org/10.1007/978-3-319-24574-4_28) In International Conference on Medical image computing and computer-assisted intervention (pp. 234-241). Springer, Cham.
 
