@@ -5,7 +5,7 @@ from keras.applications.imagenet_utils import preprocess_input
 # Convert RGB data to grayscale
 from skimage.color import rgb2gray
 # Read images from file
-from imageio import imread
+from imageio import imread, mimread
 # For JIT compilation of code
 from numba import njit, prange
 
@@ -69,6 +69,41 @@ def load(im_fn, gt_fn):
     image = preprocess_input(image, mode='tf')
 
     return image, mask.round()
+
+def loadVideo(video_path):
+    """
+    Loads video and applies preprocessing.
+    In detail, video is loaded, converted from RGB to grayscale,
+    then padded that each dimension is divisable by 32,
+    and normalized to [-1, 1].
+
+    Parameters
+    ----------
+    video_path : str
+        Path to video file, e.g. mp4 or avi file
+
+    Returns
+    -------
+    numpy.ndarray
+        Loaded and preprocessed video
+
+    """
+
+    # Load video and convert to grayscale
+    video = rgb2gray(np.asarray(mimread(video_path), dtype=np.uint8))*255
+
+    # Pad 
+    padded_video = []
+
+    for im in video:
+        padded_video.append(divpad(im))
+
+    padded_video = np.asarray(padded_video, dtype=np.uint8)
+
+    # Preprocess for neural net
+    preprocessed_video = preprocess_input(padded_video, mode='tf')
+
+    return preprocessed_video
 
 @njit(parallel=True)
 def IoU(ground_truth, prediction):
