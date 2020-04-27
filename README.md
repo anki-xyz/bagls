@@ -8,7 +8,7 @@ In contrast to stroboscopy, high-speed videoendoscopy (HSV) visualizes the full 
 
 ## BAGLS benchmark dataset
 
-The BAGLS benchmark dataset is split into 55,750 training images and 3,500 test images, as well as 559 short videos. The test images are balanced across all the international groups that provided data. All the images and videos are shuffled and anonymized, so that one cannot track back individuals and the data origin. For each frame (following the scheme ```#.png```), there is a respective segmentation mask (following the scheme ```#_seg.png```) and respective metadata (```#.meta```). The segmentation mask was created using  either the [Glottis Analysis Tools](http://www.hno-klinik.uk-erlangen.de/phoniatrie/forschung/computational-medicine/gat-software/), [PiPrA](https://github.com/anki-xyz/pipra) or both. The videos are provided without segmentation, but with metadata.
+The BAGLS benchmark dataset is split into 55,750 training images and 3,500 test images, as well as the raw data. The test images are balanced across all the international groups that provided data. All the images and videos are shuffled and anonymized, so that one cannot track back individuals and the data origin. For each frame (following the scheme ```#.png```), there is a respective segmentation mask (following the scheme ```#_seg.png```) and respective metadata (```#.meta```). The segmentation mask was created using  either the [Glottis Analysis Tools](http://www.hno-klinik.uk-erlangen.de/phoniatrie/forschung/computational-medicine/gat-software/), [PiPrA](https://github.com/anki-xyz/pipra) or both. The raw data are provided with metadata and corresponding segmentation maps (created by our baseline model, as provided here).
 
 In the following Figure the first frames from the test dataset are shown:
 
@@ -21,7 +21,7 @@ Our implementation follows largely the vanilla U-Net, we further apply Batch Nor
 
 We trained for 25 epochs using a dice loss, each epoch took roughly 38 minutes with our configuration (TensorFlow 1.13.1, Keras 2.2.4 on an Intel Xeon Silver 4116 CPU and a Titan RTX GPU). The model with the largest Intersection over Union (IoU) score on the validation set (0.831) was achieved after 21 epochs. Its performance on the test set revealed an IoU of 0.799. 
 
-Using the trained network, we are able to reliable segment unknown data:
+Using the trained network, we are able to reliable segment also unknown data:
 
 ![Segmented vocal folds](Images/vocal_folds_segmented.gif "Vocal folds segmented")
 
