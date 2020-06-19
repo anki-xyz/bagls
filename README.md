@@ -31,7 +31,7 @@ We provide two jupyter notebooks. One to train a U-Net model on the data and one
 
 ## How to cite BAGLS
 
-T.b.d.
+Gómez, P., Kist, A.M., et al. BAGLS, a multihospital Benchmark for Automatic Glottis Segmentation. Sci Data 7, 186 (2020). https://doi.org/10.1038/s41597-020-0526-3
 
 ## References
 
