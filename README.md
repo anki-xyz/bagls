@@ -29,6 +29,20 @@ Using the trained network, we are able to reliable segment also unknown data:
 
 We provide two jupyter notebooks. One to train a U-Net model on the data and one to compute the IoU on the test data. You will need to adapt the paths to your local ones. 
 
+Requirements for running the notebooks are:
+
+```
+python==3.7
+tensorflow==1.14 (or tensorflow-gpu==1.14) <- installation with conda is recommended
+keras==2.2.5
+scikit-learn==0.24.1
+segmentation_models==1.0.1
+albumentations==0.5.2
+keras-tqdm==2.0.1
+keras-contrib==2.0.8 (has been deprecated, but can be installed via `pip install git+https://www.github.com/keras-team/keras-contrib.git` )
+```
+Newer versions may also work. Note that some of packages are only available on `pip` and not via `conda`.
+
 ## How to cite BAGLS
 
 Gómez, P., Kist, A.M., et al. BAGLS, a multihospital Benchmark for Automatic Glottis Segmentation. Sci Data 7, 186 (2020). https://doi.org/10.1038/s41597-020-0526-3
